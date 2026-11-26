@@ -173,14 +173,7 @@ h2 { font-size: clamp(2.35rem, 4.9vw, 4.4rem); letter-spacing: -.055em; }
 .demo-heading { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: .35rem .8rem; }
 .demo-heading h3 { font-size: clamp(1.2rem, 1.9vw, 1.65rem); letter-spacing: -.025em; }
 .demo-heading span { color: #c8b5f1; font-size: .6875rem; letter-spacing: .075em; }
-.demo-interiors { grid-column: 1 / -1; scroll-margin-top: 1.25rem; }
-.interiors-project { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); align-items: center; gap: clamp(1rem, 3vw, 2rem); }
-.interiors-cover { display: block; width: 100%; height: auto; aspect-ratio: 8 / 5; object-fit: cover; object-position: 50% 54%; border-radius: .65rem; }
-.interiors-details { display: grid; justify-items: start; gap: 1rem; }
-.interiors-details p { color: var(--muted); }
-.interiors-stack, .interiors-links { display: flex; flex-wrap: wrap; gap: .55rem; }
-.interiors-stack { list-style: none; margin: 0; padding: 0; }
-.interiors-stack li { padding: .25rem .55rem; border: 1px solid var(--line); border-radius: .4rem; color: var(--muted); font-size: .875rem; }
+.interiors-links { display: flex; flex-wrap: wrap; gap: .55rem; }
 .interiors-links .button { min-height: 2.75rem; }
 .preview {
   position: relative;
@@ -207,42 +200,23 @@ h2 { font-size: clamp(2.35rem, 4.9vw, 4.4rem); letter-spacing: -.055em; }
 }
 .switch label:hover, .greeting summary:hover { text-decoration: underline; text-underline-offset: .2em; }
 .profile-services, .menu-desserts { display: none; }
-#profile-services:checked ~ .profile-content .profile-about, #menu-desserts:checked ~ .menu-coffee { display: none; }
-#profile-services:checked ~ .profile-content .profile-services, #menu-desserts:checked ~ .menu-desserts { display: block; }
-#profile-about:focus-visible ~ .switch label[for="profile-about"],
-#profile-services:focus-visible ~ .switch label[for="profile-services"],
+#profile-services:checked ~ .profile-layout .profile-about, #menu-desserts:checked ~ .menu-coffee { display: none; }
+#profile-services:checked ~ .profile-layout .profile-services, #menu-desserts:checked ~ .menu-desserts { display: block; }
+#profile-about:focus-visible ~ .profile-layout label[for="profile-about"],
+#profile-services:focus-visible ~ .profile-layout label[for="profile-services"],
 #menu-coffee:focus-visible ~ .switch label[for="menu-coffee"],
 #menu-desserts:focus-visible ~ .switch label[for="menu-desserts"] { outline: 3px solid var(--demo-focus); outline-offset: 3px; }
 
-.profile-preview { --demo-focus: #264c34; color-scheme: light; color: #202c25; background: #e3e5d7; }
+.profile-preview { --demo-focus: #642d20; color-scheme: light; color: #35271e; background: #f1ebe0; padding: 0; }
+.profile-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .9fr); min-height: 17rem; }
+.profile-content { padding: clamp(1rem, 2.3vw, 1.65rem); }
+.interiors-cover { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 56% 50%; }
 .profile-switch { margin-bottom: 1.15rem; }
-.profile-switch label { border-color: #6a776d; }
-#profile-about:checked ~ .switch label[for="profile-about"],
-#profile-services:checked ~ .switch label[for="profile-services"] { background: #293b32; color: #f9f8ee; border-color: #293b32; }
-.profile-content { position: relative; width: min(66%, 23rem); }
+.profile-switch label { border-color: #8b6d60; }
+#profile-about:checked ~ .profile-layout label[for="profile-about"],
+#profile-services:checked ~ .profile-layout label[for="profile-services"] { background: #763e2e; color: #fff7ee; border-color: #763e2e; }
 .profile-content strong { display: block; margin-block: .42rem .6rem; font: 700 clamp(1.7rem, 3.5vw, 3rem)/.98 Georgia, serif; letter-spacing: -.045em; }
 .profile-content p:last-child { max-width: 29ch; }
-.profile-content ul { padding-inline-start: 1.15rem; }
-.profile-art {
-  position: absolute;
-  z-index: -1;
-  inset: 0 0 0 auto;
-  width: 41%;
-  overflow: hidden;
-  background: linear-gradient(152deg, transparent 59%, #b5a185 59% 60%, #d3bea2 60%), linear-gradient(90deg, #a9ad99, #c3c2ac 28%, #939f8b);
-}
-.profile-art::before {
-  content: '';
-  position: absolute;
-  width: 64%;
-  height: 78%;
-  inset: 13% auto auto 18%;
-  border-radius: 48% 48% 0 0 / 31% 31% 0 0;
-  border-left: .75rem solid #9a9d86;
-  background: linear-gradient(128deg, #777e6d, #b0b699 53%, #e1cfac 54%, #af9674 100%);
-  box-shadow: .7rem .45rem 1rem #5d654c31;
-}
-.profile-art span { position: absolute; inset: auto 12% 13% 18%; height: 16%; border-radius: .6rem .6rem .2rem .2rem; background: #8d644c; box-shadow: 0 .45rem 0 -.13rem #625743, .4rem .72rem .9rem #6b523e75; }
 
 .coffee-preview {
   --demo-focus: #45291d;
@@ -340,7 +314,7 @@ h2 { font-size: clamp(2.35rem, 4.9vw, 4.4rem); letter-spacing: -.055em; }
   }
   .hero::after { background: linear-gradient(180deg, #080815f2 3%, #0808158f 35%, transparent 64%, transparent 82%, var(--background)); }
   .demo-profile, .demo-coffee, .demo-greeting, .demo-app { grid-column: span 6; }
-  .profile-art { width: 34%; }
+  .profile-layout { grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); }
 }
 
 @media (max-width: 39rem) {
@@ -353,8 +327,8 @@ h2 { font-size: clamp(2.35rem, 4.9vw, 4.4rem); letter-spacing: -.055em; }
   .sky-galaxy { left: 56%; top: 76%; width: 126vw; }
   .demo-grid, .about { grid-template-columns: minmax(0, 1fr); }
   .demo { grid-column: auto; }
-  .interiors-project { grid-template-columns: minmax(0, 1fr); }
-  .interiors-cover { aspect-ratio: 4 / 3; }
+  .profile-layout { grid-template-columns: minmax(0, 1fr); }
+  .interiors-cover { order: -1; height: auto; aspect-ratio: 8 / 5; }
   .preview { min-height: 16.5rem; }
 }
 

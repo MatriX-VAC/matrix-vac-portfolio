@@ -51,30 +51,36 @@
       </div>
 
       <div class="demo-grid">
-        <article class="demo demo-profile">
-          <header class="demo-heading"><h3>Сайт-визитка</h3><span>Демо-концепция</span></header>
+        <article class="demo demo-profile" id="forma-i-svet" aria-labelledby="forma-i-svet-title">
+          <header class="demo-heading"><h3 id="forma-i-svet-title">Сайт-визитка «Форма и свет»</h3><span>Демо-концепция</span></header>
           <fieldset class="preview profile-preview">
-            <legend class="visually-hidden">Раздел страницы специалиста</legend>
+            <legend class="visually-hidden">Раздел сайта студии «Форма и свет»</legend>
             <input class="visually-hidden" type="radio" id="profile-about" name="profile" checked>
             <input class="visually-hidden" type="radio" id="profile-services" name="profile">
-            <div class="switch profile-switch">
-              <label for="profile-about">Обо мне</label>
-              <label for="profile-services">Услуги</label>
-            </div>
-            <div class="profile-content">
-              <div class="profile-about panel">
-                <p class="demo-label">Дизайн интерьеров</p>
-                <strong>Интерьеры<br>для жизни</strong>
-                <p>Проектирую спокойные интерьеры, в которых удобно жить каждый день.</p>
+            <div class="profile-layout">
+              <div class="profile-content">
+                <div class="switch profile-switch">
+                  <label for="profile-about">О студии</label>
+                  <label for="profile-services">Услуги</label>
+                </div>
+                <div class="profile-about panel">
+                  <p class="demo-label">Студия интерьерного дизайна</p>
+                  <strong>Форма и свет</strong>
+                  <p>Сайт студии с галереей интерьеров, калькулятором стоимости и брифом.</p>
+                </div>
+                <div class="profile-services panel">
+                  <p class="demo-label">Студия интерьерного дизайна</p>
+                  <strong>Услуги</strong>
+                  <p>Дизайн квартир, домов и коммерческих пространств.</p>
+                </div>
               </div>
-              <div class="profile-services panel">
-                <p class="demo-label">Дизайн интерьеров</p>
-                <strong>Услуги</strong>
-                <ul><li>Консультация</li><li>Планировка</li><li>Дизайн-проект</li></ul>
-              </div>
+              <img class="interiors-cover" src="forma-i-svet-cover.webp" alt="Солнечная гостиная с арочным окном и деревянным столом" width="720" height="600" loading="lazy" decoding="async">
             </div>
-            <div class="profile-art" aria-hidden="true"><span></span></div>
           </fieldset>
+          <div class="interiors-links">
+            <a class="button button-primary" href="https://matrix-vac.github.io/forma-i-svet/">Открыть сайт студии</a>
+            <a class="button button-secondary" href="https://github.com/MatriX-VAC/forma-i-svet">Смотреть код</a>
+          </div>
         </article>
 
         <article class="demo demo-coffee">
@@ -126,22 +132,6 @@
           </div>
         </article>
 
-        <article class="demo demo-interiors" id="forma-i-svet" aria-labelledby="forma-i-svet-title">
-          <header class="demo-heading"><h3 id="forma-i-svet-title">Форма и свет</h3><span>Демонстрационный сайт</span></header>
-          <div class="interiors-project">
-            <img class="interiors-cover" src="forma-i-svet-cover.webp" alt="Солнечная гостиная с арочным окном и деревянным столом" width="720" height="600" loading="lazy" decoding="async">
-            <div class="interiors-details">
-              <p>Демонстрационный сайт студии интерьеров с галереей проектов, калькулятором стоимости и скачиваемым брифом.</p>
-              <ul class="interiors-stack" aria-label="Технологии проекта">
-                <li>React</li><li>TypeScript</li><li>Vite</li><li>CSS</li>
-              </ul>
-              <div class="interiors-links">
-                <a class="button button-primary" href="https://matrix-vac.github.io/forma-i-svet/">Открыть сайт студии</a>
-                <a class="button button-secondary" href="https://github.com/MatriX-VAC/forma-i-svet">Смотреть код</a>
-              </div>
-            </div>
-          </div>
-        </article>
       </div>
     </section>
 
