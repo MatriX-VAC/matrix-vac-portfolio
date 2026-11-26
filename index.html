@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Портфолио MatriX-VAC. Интерактивные демо сайтов-визиток, сайтов для кофеен, поздравительных страниц и небольших приложений.">
+  <meta name="theme-color" content="#090917">
+  <title>MatriX-VAC — сайты и приложения</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">К основному содержанию</a>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="sky" aria-hidden="true">
+        <div class="sky-layer sky-stars"></div>
+        <div class="sky-layer sky-nebula"></div>
+        <div class="sky-layer sky-galaxy">
+          <img src="galaxy.webp" alt="" width="1254" height="1254" fetchpriority="high">
+        </div>
+        <div class="sky-layer sky-near"><canvas></canvas></div>
+      </div>
+
+      <header class="site-header wrap">
+        <span class="brand"><span class="brand-mark" aria-hidden="true">✦</span> MatriX-VAC</span>
+        <nav aria-label="Навигация по сайту">
+          <a href="#services">Демо</a>
+          <a href="#about">Обо мне</a>
+        </nav>
+      </header>
+
+      <div class="hero-inner wrap" id="main" tabindex="-1">
+        <div class="hero-copy">
+          <p class="eyebrow hero-intro"><span aria-hidden="true"></span> Портфолио веб-разработчика</p>
+          <h1 class="hero-intro" id="hero-title">Создаю сайты<br><em>и приложения</em></h1>
+          <p class="hero-description hero-intro">Я MatriX-VAC. Разрабатываю сайты для специалистов и кофеен, интерактивные поздравления и небольшие приложения для учебных проектов и практики.</p>
+          <div class="actions">
+            <a class="button button-primary" href="#services">Смотреть демо</a>
+            <a class="button button-secondary" href="https://github.com/MatriX-VAC">Мой GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="demos wrap" aria-labelledby="services-title" tabindex="-1">
+      <div class="section-heading">
+        <h2 id="services-title">Что я создаю</h2>
+        <p>Попробуйте интерфейсы прямо здесь.</p>
+      </div>
+
+      <div class="demo-grid">
+        <article class="demo demo-profile">
+          <header class="demo-heading"><h3>Сайт-визитка</h3><span>Демо-концепция</span></header>
+          <fieldset class="preview profile-preview">
+            <legend class="visually-hidden">Раздел страницы специалиста</legend>
+            <input class="visually-hidden" type="radio" id="profile-about" name="profile" checked>
+            <input class="visually-hidden" type="radio" id="profile-services" name="profile">
+            <div class="switch profile-switch">
+              <label for="profile-about">Обо мне</label>
+              <label for="profile-services">Услуги</label>
+            </div>
+            <div class="profile-content">
+              <div class="profile-about panel">
+                <p class="demo-label">Дизайн интерьеров</p>
+                <strong>Интерьеры<br>для жизни</strong>
+                <p>Проектирую спокойные интерьеры, в которых удобно жить каждый день.</p>
+              </div>
+              <div class="profile-services panel">
+                <p class="demo-label">Дизайн интерьеров</p>
+                <strong>Услуги</strong>
+                <ul><li>Консультация</li><li>Планировка</li><li>Дизайн-проект</li></ul>
+              </div>
+            </div>
+            <div class="profile-art" aria-hidden="true"><span></span></div>
+          </fieldset>
+        </article>
+
+        <article class="demo demo-coffee">
+          <header class="demo-heading"><h3>Кофейня «Молоко и зёрна»</h3><span>Демо-концепция</span></header>
+          <fieldset class="preview coffee-preview">
+            <legend class="visually-hidden">Категория меню кофейни</legend>
+            <strong class="coffee-title">Меню</strong>
+            <input class="visually-hidden" type="radio" id="menu-coffee" name="menu" checked>
+            <input class="visually-hidden" type="radio" id="menu-desserts" name="menu">
+            <div class="switch coffee-switch">
+              <label for="menu-coffee">Кофе</label>
+              <label for="menu-desserts">Десерты</label>
+            </div>
+            <ul class="menu-list menu-coffee panel"><li>Капучино <span>250 мл</span></li><li>Флэт уайт <span>180 мл</span></li><li>Фильтр-кофе <span>300 мл</span></li></ul>
+            <ul class="menu-list menu-desserts panel"><li>Лимонный тарт <span>95 г</span></li><li>Брауни <span>80 г</span></li><li>Чизкейк <span>120 г</span></li></ul>
+          </fieldset>
+          <a class="button button-secondary coffee-link" href="https://matrix-vac.github.io/milk-and-beans-cafe/">Открыть сайт кофейни</a>
+        </article>
+
+        <article class="demo demo-greeting">
+          <header class="demo-heading"><h3>Сайт-поздравление</h3><span>Демо-концепция</span></header>
+          <div class="preview greeting-preview">
+            <span class="greeting-spark spark-left" aria-hidden="true">✧</span>
+            <span class="greeting-spark spark-right" aria-hidden="true">✦</span>
+            <p class="demo-label">Личная открытка</p>
+            <strong class="greeting-title">Для тебя!</strong>
+            <details class="greeting">
+              <summary><span class="greeting-closed">Открыть</span><span class="greeting-open">Закрыть</span></summary>
+              <p>С днём рождения! Пусть всё, что радует тебя, случается чаще.</p>
+              <span class="confetti" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+            </details>
+          </div>
+        </article>
+
+        <article class="demo demo-app">
+          <header class="demo-heading"><h3>Приложение для практики</h3><span>Демо-концепция</span></header>
+          <div class="preview task-preview">
+            <div class="task-header">
+              <div><p class="demo-label">Учебный проект</p><strong>Журнал задач</strong></div>
+              <span class="task-count" aria-live="polite" aria-atomic="true">1 из 3</span>
+            </div>
+            <progress class="task-progress" value="1" max="3" aria-label="Выполнено задач"></progress>
+            <fieldset class="task-list">
+              <legend class="visually-hidden">Задачи учебного проекта</legend>
+              <label><input type="checkbox" checked><span>Собрать материалы</span></label>
+              <label><input type="checkbox"><span>Подготовить таблицу</span></label>
+              <label><input type="checkbox"><span>Оформить отчёт</span></label>
+            </fieldset>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="about wrap" aria-labelledby="about-title" tabindex="-1">
+      <h2 id="about-title">Обо мне</h2>
+      <p>Я MatriX-VAC. Создаю сайты и небольшие приложения и уделяю внимание тому, чтобы ими было удобно пользоваться на телефоне и компьютере.</p>
+    </section>
+
+    <section class="github wrap" aria-labelledby="github-title">
+      <div class="github-panel">
+        <h2 id="github-title">Мои репозитории</h2>
+        <a class="button button-primary" href="https://github.com/MatriX-VAC?tab=repositories">Смотреть на GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap">MatriX-VAC</footer>
+</body>
+</html>
+
